@@ -25,16 +25,16 @@ else:
 # Я не понимаю, что вы от меня хотите...
 answer = input('Чётные или нечётные?: ')
 a = 0
-answer = answer.log()
 if answer == 'четные':
   while a < 21:
     if a % 2 == 0:
       print(a, end = " ")
-      a +=1
+    a += 1
 elif answer == 'нечетные':
   while a < 21:
     if a % 2 == 1:
       print(a, end = " ")
+    a += 1
 else:
   print('Не понимаю что вы от меня хотите')
 
