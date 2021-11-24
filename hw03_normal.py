@@ -51,11 +51,14 @@ print(ower_date)
 # в диапазоне от -100 до 100. В списке должно быть n - элементов.
 # Подсказка:
 # для получения случайного числа используйте функцию randint() модуля random
+
+import random
 n = int(input('введите количество случайных элементов в списке: '))
 my_list = []
 for i in range(n):
     my_list.random.randint(n)
 print(my_list)
+
 # my_list.append(random.randint(-100, 100)), как правильно пользоваться рандомом? правильно ли если написать как в коменте?
 # Задача-4: Дан список, заполненный произвольными целыми числами.
 # Получите новый список, элементами которого будут: 
@@ -71,5 +74,5 @@ print(new_list)
 next_list = []
 for i in my_list:
   if my_list.count(i) == 1:
-    next_list.append(i)
+    next_list.append(i)Ы
 print(next_list)
