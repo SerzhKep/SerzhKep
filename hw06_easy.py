@@ -14,19 +14,23 @@ def avg(a, b):
     Результат:
         - float.
     """
-    return (a * b) ** 0.5
+    if a * b >= 0:
+        return (a * b) ** 0.5
+    else:
+        raise SyntaxError('Нельзя использовать отрицательное число!!!')
 
 try:
   a = float(input("a = "))
   b = float(input("b = "))
   c = avg(a, b)
   print("Среднее геометрическое = {:.2f}".format(c))
-except(SyntaxError):
-  print('Error!')
+except SyntaxError as error:
+    print('Error!', error)
 
 # ПРИМЕЧАНИЕ: Для решения задач 2-4 необходимо познакомиться с модулями os, sys!
 # СМ.: https://pythonworld.ru/moduli/modul-os.html, https://pythonworld.ru/moduli/modul-sys.html
-
+# А тут я не понял где может быть ошибка) и попробовал найти среднее из отрицательных чисел, а программа выдаёт
+# положительный результат, что, мне кажется не верно........
 # Задача-2:
 # Напишите скрипт, создающий директории dir_1 - dir_9 в папке,
 # из которой запущен данный скрипт.
@@ -56,6 +60,7 @@ def list_dir():
         if path.isdir(element):
             print('{}. {}'.format(index, element))
 if __name__ == 'go':
-    list_dir()
+    listdir()
+    # Не просто однако это всё...=(
 # Задача-4:
 # Напишите скрипт, создающий копию файла, из которого запущен данный скрипт.
