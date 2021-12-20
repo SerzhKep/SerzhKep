@@ -35,7 +35,7 @@ print(b)
 # import math
 # math.sqrt(4) - вычисляет корень числа 4
 
-
+import math
 a = int(input('Введите значение а: '))
 b = int(input('Введите значение b: '))
 c = int(input('Введите значение c: '))
@@ -50,18 +50,6 @@ else:
     x1 = (-b + math.sqrt(d)) / (2 * a)
     x2 = (-b - math.sqrt(d)) / (2 * a)
     print(x1, x2)
-
-
-
-
-
-
-
-
-
-
-
-
 a = [1, 2, 3, 4, 5, 6, 7, 8]
 def summ:
     for i in a:

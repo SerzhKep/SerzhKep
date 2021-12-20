@@ -1,3 +1,5 @@
+import os
+from Easy import make_dir, remove_dir, files_in_dir, copy_file
 # Задача-1:
 # Примечание: Если уже делали easy задание, то просто перенесите решение сюда.
 # Следующая программа написана верно, однако содержит места потенциальных ошибок.
@@ -41,4 +43,44 @@ except(SyntaxError):
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
+
+
+# print(sys.argv)
+
+def main():
+    while True:
+        print('''1 for change directory
+2 for explore current directory
+3 for remove directory
+4 for create directory
+q for quit''')
+        task = input()
+
+        if task == 'q':
+            print('goodbye')
+            break
+
+        elif task == '1':
+            dirname = input('enter name of the directory: ')
+            file_list = files_in_dir()
+            if dirname in file_list:
+                os.chdir(dirname)
+                print('Moved to {} successfully'.format(dirname), os.getcwd())
+            else:
+                print('No such directory!')
+
+        elif task == '2':
+            print(os.getcwd(), files_in_dir(dirname))
+
+        elif task == '3':
+            dirname = input('enter name of the directory: ')
+            if remove_dir(dirname):
+                print('{} removed successfully'.format(dirname))
+
+        elif task == '4':
+            dirname = input('enter name of the directory: ')
+            if make_dir(dirname):
+                print('{} created successfully'.format(dirname))
+
+main()
 

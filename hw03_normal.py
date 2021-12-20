@@ -75,5 +75,5 @@ print(new_list)
 next_list = []
 for i in my_list:
   if my_list.count(i) == 1:
-    next_list.append(i)Ы
+    next_list.append(i)
 print(next_list)
